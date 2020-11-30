@@ -133,11 +133,76 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">作業進度 << <a href='作業進度.html'>Previous</a> <a href='PC Hardware.html'>Next</a> >> PC Hardware<br /><h1>HW1</h1>
-<p>心得...</p>
-<p>有夠麻煩的東西</p>
-<p>不做了 不做了...</p>
-<br />作業進度 << <a href='作業進度.html'>Previous</a> <a href='PC Hardware.html'>Next</a> >> PC Hardware</div>
+    <div id="tipue_search_content">HW3-6 << <a href='HW3-6.html'>Previous</a> <br /><h1>Exercise</h1>
+<p>String Lists<span> </span><img class="chili" src="https://www.practicepython.org/assets/img/chili-liz-20x20.png"/><span> </span><img class="chili" src="https://www.practicepython.org/assets/img/chili-liz-20x20.png"/> 字串清單</p>
+<p><i>strings lists index </i>字符串列表索引<br/><br/></p>
+<p>Exercise 6 (and<span> </span><a href="https://www.practicepython.org/solution/2014/03/19/06-string-lists-solutions.html">Solution</a>) 練習6（和解決方案）</p>
+<p>Ask the user for a string and print out whether this string is a palindrome or not. (A<span> </span><strong>palindrome</strong><span> </span>is a string that reads the same forwards and backwards.)</p>
+<p>向用戶詢問一個字符串，然後打印出該字符串是否是回文。 （回文是指向前和向後讀取相同字符串的字符串。）</p>
+<p></p>
+<p>Discussion 討論區</p>
+<p>Concepts for this week: 本週的概念</p>
+<ul>
+<li>List indexing 列表索引</li>
+<li>Strings are lists 字符串是列表</li>
+</ul>
+<p></p>
+<p>List indexing 列表索引</p>
+<p>In Python (and most programming in general), you start counting lists from the number 0. The first element in a list is “number 0”, the second is “number 1”, etc.</p>
+<p>在Python（以及大多數通用編程）中，您從數字0開始計數列表。列表中的第一個元素是“數字0”，第二個元素是“數字1”，依此類推。</p>
+<p>As a result, when you want to get single elements out of a list, you can ask a list for that number element:</p>
+<p>結果，當您要從列表中刪除單個元素時，可以向列表中請求該number元素：</p>
+<pre><code class="language-pycon" data-lang="pycon">  &gt;&gt;&gt; a = [5, 10, 15, 20, 25]
+  &gt;&gt;&gt; a[3]
+  20
+  &gt;&gt;&gt; a[0]
+  5</code></pre>
+<p>There is also a convenient way to get sublists between two indices:</p>
+<p>還有一種便捷的方法來獲取兩個索引之間的子列表：</p>
+<pre><code class="language-pycon" data-lang="pycon">  &gt;&gt;&gt; a = [5, 10, 15, 20, 25, 30, 35, 40]
+  &gt;&gt;&gt; a[1:4]
+  [10, 15, 20]
+  &gt;&gt;&gt; a[6:]
+  [35, 40]
+  &gt;&gt;&gt; a[:-1]
+  [5, 10, 15, 20, 25, 30, 35]</code></pre>
+<p>The first number is the “start index” and the last number is the “end index.”</p>
+<p>第一個數字是“開始索引”，最後一個數字是“結束索引”。</p>
+<p>You can also include a third number in the indexing, to count how often you should read from the list:</p>
+<p>您還可以在索引中包含第三個數字，以計算應該從列表中讀取的頻率：</p>
+<pre><code class="language-pycon" data-lang="pycon">  &gt;&gt;&gt; a = [5, 10, 15, 20, 25, 30, 35, 40]
+  &gt;&gt;&gt; a[1:5:2]
+  [10, 20]
+  &gt;&gt;&gt; a[3:0:-1]
+  [15, 10, 5]</code></pre>
+<p>To read the whole list, just use the variable name (in the above examples,<span> </span><code class="highlighter-rouge">a</code>), or you can also use<span> </span><code class="highlighter-rouge">[:]</code><span> </span>at the end of the variable name (in the above examples,<span> </span><code class="highlighter-rouge">a[:]</code>).</p>
+<p>要讀取整個列表，只需使用變量名（在上面的示例中，a），或者也可以在變量名的末尾使用[：]（在上面的示例中，a [：]）。</p>
+<p>Strings are lists 字符串是列表</p>
+<p>Because strings are lists, you can do to strings everything that you do to lists. You can iterate through them:</p>
+<p>因為字符串是列表，所以您可以將對列表所做的所有操作都字符串化。您可以遍歷它們：</p>
+<pre><code class="language-python" data-lang="python">  <span class="n">string</span> <span class="o">=</span> <span class="s">"example"</span>
+  <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">string</span><span class="p">:</span> 
+    <span class="k">print</span> <span class="s">"one letter: "</span> <span class="o">+</span> <span class="n">c</span></code></pre>
+<p>Will give the result:</p>
+<p>將給出結果：</p>
+<pre><code class="language-pycon" data-lang="pycon">  one letter: e
+  one letter: x
+  one letter: a
+  one letter: m
+  one letter: p
+  one letter: l
+  one letter: e</code></pre>
+<p>You can take sublists:</p>
+<p>您可以列出子列表：</p>
+<pre><code class="language-pycon" data-lang="pycon">  &gt;&gt;&gt; string = "example"
+  &gt;&gt;&gt; s = string[0:5]
+  &gt;&gt;&gt; print s
+  examp</code></pre>
+<p>Now<span> </span><code class="highlighter-rouge">s</code><span> </span>has the string “examp” in it.</p>
+<p>現在s中有字符串“ examp”。</p>
+<p>Moral of the story: a string is a list.</p>
+<p>故事的寓意：字符串是一個列表。</p>
+<p>Happy coding!</p><br />HW3-6 << <a href='HW3-6.html'>Previous</a> </div>
         
     <!-- footer -->
       <div class="container">
